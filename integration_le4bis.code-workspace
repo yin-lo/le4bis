@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+
+	"settings": {
+		"liveSassCompile.settings.formats":[
+			{
+				"format": "expanded",
+				"extensionName": ".css",
+				"savePath": "/assets/css"
+			},
+			{
+				"format": "compressed",
+				"extensionName": ".min.css",
+				"savePath": "/assets/css"
+			},
+		],
+		"liveSassCompile.settings.generateMap": true,
+		"liveSassCompile.settings.showOutputWindowOn": "Error",
+		"liveSassCompile.settings.autoprefix": [
+			"> 1%",
+			"last 2 versions"
+		]
+	},
+}
