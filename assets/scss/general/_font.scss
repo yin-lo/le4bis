@@ -1,0 +1,88 @@
+@use 'variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+html {
+	font-size: 1px;
+}
+
+body {
+	font-size: 16rem;
+	font-family: $typo;
+}
+
+h1,
+.h1 {
+	font-size: 64rem;
+	line-height: 80rem;
+	font-weight: 800;
+
+	@media screen and (max-width: 767px) {
+		font-size: 56rem;
+		line-height: 72rem;
+	}
+}
+
+h2,
+.h2 {
+	font-size: 56rem;
+	line-height: 72rem;
+	font-weight: 800;
+	text-transform: uppercase;
+
+	@media screen and (max-width: 767px) {
+		font-size: 46rem;
+		line-height: 60rem;
+	}
+}
+
+h3,
+.h3 {
+	font-size: 40rem;
+	line-height: 56rem;
+	font-weight: 700;
+
+	@media screen and (max-width: 767px) {
+		font-size: 36rem;
+	}
+}
+
+h4,
+.h4 {
+	font-size: 20rem;
+	line-height: 32rem;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+h5,
+.h5 {
+	font-size: 22rem;
+	line-height: 24rem;
+	font-weight: 400;
+}
+
+.BaseText {
+	font-size: 16rem;
+	line-height: 24rem;
+	font-weight: 400;
+}
+
+.LegendText {
+	font-size: 14rem;
+	line-height: 24rem;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.MainItems {
+	font-size: 16rem;
+	line-height: 24rem;
+	font-weight: 800;
+}
+
+.SecondItems {
+	font-size: 16rem;
+	line-height: 24rem;
+	font-weight: 600;
+}
