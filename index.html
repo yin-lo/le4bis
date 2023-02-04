@@ -11,7 +11,7 @@
 	<body>
 		<header></header>
 		<section class="hero">
-			<div class="container">
+			<div class="hero--container">
 				<div class="hero--wrapper">
 					<h4 class="h4 hero--overtitle">Le 4 bis c'est quoi ?</h4>
 					<h1 class="h1 hero--title">La place de tous les possibles</h1>
@@ -21,14 +21,24 @@
 					</p>
 					<div class="hero--buttons">
 						<a class="hero--button btn" href="">Contactez-nous</a>
-						<a class="hero--link link" href="">En apprendre davantage</a>
+						<a class="hero--link link" href="">
+							<p class="link--text">En apprendre davantage</p>
+							<div class="link--hidden-arrow">
+								<img class="link--arrow" src="./assets/media/arrow.svg" alt="" />
+							</div>
+						</a>
 					</div>
 				</div>
 				<figure class="hero--picture">
-					<img class="hero--image" src="" alt="" />
+					<img class="hero--image" src="./assets/media/hero-picture.png" alt="jeunes femmes asiatique et caucasienne et jeune homme noir" />
 				</figure>
 			</div>
-			<svg class="hero--wave-bottom"></svg>
+			<svg class="hero--wave-bottom">
+				<clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+					<path d="M0.268,0.518 C0.316,0.42,0.363,0.244,0.411,0.138 C0.48,-0.014,0.551,-0.023,0.62,0.134 C0.686,0.287,0.756,0.659,0.821,0.848 C0.88,1,0.943,1,1,0.875 V0.005 H0 V0.254 C0.085,0.606,0.178,0.698,0.268,0.518"></path>
+				</clipPath>
+			</svg>
+			<div class="clipped hero--svg"></div>
 		</section>
 
 		<section class="guide">

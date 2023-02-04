@@ -1,0 +1,61 @@
+@use '../general/variables' as *;
+@use '../general/font' as *;
+
+// bouton au bord rond
+.btn {
+	@include main-items;
+	display: inline-block;
+	padding: 12px 24px;
+	background-color: $c-white;
+	border-radius: 32px;
+	transition: $t-quick-dynamic;
+}
+
+// lien avec flèche qui grandit
+.link {
+	@include second-items;
+	display: flex;
+	align-items: center;
+
+	&--hidden-arrow {
+		width: 24px;
+		overflow-x: hidden;
+		position: relative;
+		transition: width $t-quick-dynamic;
+		height: 15px;
+		margin-left: 10px;
+	}
+
+	&:hover &--text {
+		text-decoration: underline;
+	}
+
+	&:hover &--hidden-arrow {
+		width: 45px;
+	}
+
+	&--arrow {
+		position: absolute;
+		right: 0;
+		max-width: none;
+		width: 45px;
+	}
+}
+
+// vague en bas d'une section
+.hero--wave-bottom {
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+.clipped {
+	width: 100%;
+	height: 145rem;
+	background: $c-tertiary2;
+	clip-path: url(#my-clip-path);
+
+	@media screen and (max-width: 767px) {
+		height: 38rem;
+		bottom: -37rem;
+	}
+}

@@ -1,0 +1,68 @@
+@use '../general/variables' as *;
+@use '../general/font' as *;
+@use '../general/general';
+
+.hero {
+	background-color: $c-tertiary2;
+	position: relative;
+
+	&--container {
+		@extend .container;
+		padding-top: 142rem;
+		padding-bottom: 154rem;
+		display: flex;
+		column-gap: 80rem;
+		justify-content: space-between;
+		@media screen and (max-width: 767px) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&--wrapper {
+		flex: 5;
+		@media screen and (max-width: 767px) {
+			margin-top: 50rem;
+		}
+	}
+
+	&--overtitle {
+		margin-bottom: 16rem;
+	}
+
+	&--title {
+		margin-bottom: 32rem;
+	}
+
+	&--text {
+		@include base-text;
+	}
+
+	&--buttons {
+		margin-top: 44rem;
+		display: flex;
+		column-gap: 100rem;
+		align-items: center;
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+
+	&--button{
+		@media screen and (max-width: 767px) {
+			margin-bottom: 44rem;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&--figure {
+		flex: 6.5;
+	}
+
+	&--svg{
+		position: absolute;
+		bottom: -143rem;
+		left: 0;
+	}
+}
+
