@@ -62,27 +62,30 @@ h5,
 	font-weight: 400;
 }
 
-.baseText {
+@mixin base-text () {
 	font-size: 16rem;
 	line-height: 24rem;
 	font-weight: 400;
 }
 
-.legendText {
+@mixin legend-text {
 	font-size: 14rem;
 	line-height: 24rem;
 	font-weight: 400;
 	font-style: italic;
 }
 
-.mainItems {
+@mixin main-items {
 	font-size: 16rem;
 	line-height: 24rem;
 	font-weight: 800;
 }
 
-.secondItems {
+@mixin second-items {
 	font-size: 16rem;
 	line-height: 24rem;
 	font-weight: 600;
 }
+
+
+// pour appeler la mixin, ecrire : @include base-text (possibilité d'écrire un truc spécifique ici)
