@@ -1,0 +1,209 @@
+@use '../general/variables' as *;
+@use '../general/font' as *;
+@use '../general/general';
+
+// section guides pratiques
+.guide {
+	background-color: $c-background;
+
+	&--container {
+		@extend .container;
+		padding-top: 210rem;
+		padding-bottom: 180rem;
+
+		@media screen and (max-width: 767px) {
+			padding-top: 80rem;
+			padding-bottom: 80rem;
+		}
+	}
+
+	&--wrapper {
+		text-align: center;
+		margin-bottom: 100rem;
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 50rem;
+		}
+	}
+
+	&--title {
+		margin-bottom: 32rem;
+	}
+
+	&--text {
+		max-width: 535rem;
+		margin: auto;
+
+		@media screen and (max-width: 767px) {
+			width: 100%;
+		}
+	}
+
+	&--box {
+		display: flex;
+		justify-content: space-around;
+
+		@media screen and (max-width: 767px) {
+			flex-wrap: wrap;
+			column-gap: 65rem;
+			row-gap: 72rem;
+			//tous les enfants directs de --box font la même taille :
+			> * {
+				flex: 1;
+			}
+		}
+	}
+
+	&--picto:nth-child(2n + 0) {
+		padding-top: 65rem;
+
+		@media screen and (max-width: 767px) {
+			padding-top: 0;
+		}
+	}
+
+	&--picto:nth-child(3) {
+		padding-top: 130rem;
+
+		@media screen and (max-width: 767px) {
+			padding-top: 0;
+		}
+	}
+}
+
+// section actualités - faire le zomm sur la photo et mettre le picto à côté de la date
+.actu {
+	background-color: $c-quaternary3;
+	position: relative;
+
+	&--svg-top {
+		background-color: $c-quaternary3;
+		position: absolute;
+		top: -143rem;
+		left: 0;
+
+		@media screen and (max-width: 767px) {
+			top: -37rem;
+		}
+	}
+
+	&--container {
+		@extend .container;
+		padding-top: 120rem;
+		padding-bottom: 150rem;
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column-reverse;
+			padding-top: 60rem;
+			padding-bottom: 140rem;
+		}
+	}
+
+	&--title {
+		text-align: center;
+		margin-bottom: 60rem;
+	}
+
+	&--box {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+
+	&--picture {
+		flex: 6;
+		transition: $t-quick-dynamic;
+		overflow: hidden;
+		display: inline-block;
+	}
+
+	&--image {
+		object-fit: cover;
+		border-radius: 32px;
+		// width: 100%;
+
+		&:hover {
+			transform: scale(110%);
+		}
+	}
+
+	&--wrapper {
+		flex: 5;
+
+		@media screen and (max-width: 767px) {
+			margin-top: 30rem;
+		}
+	}
+
+	&--time {
+		@include legend-text;
+		margin-bottom: 8rem;
+	}
+
+	&--picto {
+		background-image: url(../../media/former-icon-white.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: $c-secondary4;
+	}
+
+	&--subtitle {
+		margin-bottom: 16rem;
+	}
+
+	&--text {
+		@include base-text;
+		margin-bottom: 44rem;
+	}
+
+	&--button {
+		background-color: $c-secondary2;
+
+		&:hover {
+			background-color: $c-secondary5;
+			color: $c-white;
+		}
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 44rem;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&--svg-bottom {
+		background-color: $c-quaternary3;
+		position: absolute;
+		bottom: -143rem;
+		left: 0;
+
+		@media screen and (max-width: 767px) {
+			bottom: -37rem;
+		}
+	}
+}
+
+// section notre histoire
+.story {
+	position: relative;
+	background-color: $c-white;
+	border-radius: 32px;
+	max-width: 1080rem;
+	margin: auto;
+	@extend .container;
+	padding-top: 90rem;
+	padding-bottom: 90rem;
+
+	@media screen and (max-width: 767px) {
+		margin-inline: 18rem;
+		margin-top: -80rem;
+	}
+
+	&--title {
+		text-align: center;
+	}
+
+}

@@ -10,16 +10,20 @@
 		@extend .container;
 		padding-top: 142rem;
 		padding-bottom: 154rem;
-		display: flex;
+		display: flex; 
 		column-gap: 80rem;
 		justify-content: space-between;
+
 		@media screen and (max-width: 767px) {
 			flex-direction: column-reverse;
+			padding-top: 50rem;
+			padding-bottom: 55rem;
 		}
 	}
 
 	&--wrapper {
 		flex: 5;
+
 		@media screen and (max-width: 767px) {
 			margin-top: 50rem;
 		}
@@ -42,12 +46,19 @@
 		display: flex;
 		column-gap: 100rem;
 		align-items: center;
+
 		@media screen and (max-width: 767px) {
 			flex-direction: column;
 		}
 	}
 
 	&--button{
+
+		&:hover{
+			background-color: $c-primary3;
+			color: $c-white;
+		}
+
 		@media screen and (max-width: 767px) {
 			margin-bottom: 44rem;
 			width: 100%;
@@ -55,11 +66,12 @@
 		}
 	}
 
-	&--figure {
+	&--picture {
 		flex: 6.5;
 	}
 
 	&--svg{
+		background: $c-tertiary2;
 		position: absolute;
 		bottom: -143rem;
 		left: 0;
