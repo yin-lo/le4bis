@@ -126,5 +126,43 @@
 
 // box avec image ronde et texte
 .box{
+	display: flex;
+	// justify-content: space-between;
+	align-items: center;
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+	}
+
+	&--picture{
+		flex: 4;
+		width: 365rem;
+		height: 365rem;
+	}
 	
+	&--image{
+		width: 365rem;
+		height: 365rem;
+		border-radius: 200px;
+		object-fit: cover;
+	}
+
+	&--wrapper{
+		flex: 5.5;
+		// margin-left: 80rem;
+	}
+
+	&--subtitle{
+		margin-bottom: 16rem;
+	}
+
+	&--text{
+		@include base-text;
+		margin-top: 16rem;
+	}
+	
+	&--button{
+		margin-top: 44rem;
+		
+	}
 }
