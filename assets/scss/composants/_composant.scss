@@ -8,8 +8,10 @@
 	padding: 12px 24px;
 	background-color: $c-white;
 	border-radius: 32px;
-	transition: $t-quick-dynamic;
 }
+
+// bouton large du contact
+// dans la section concernée dans le fichier _home
 
 // lien avec flèche qui grandit
 .link {
@@ -103,66 +105,87 @@
 		margin-top: 20rem;
 	}
 
-	&:nth-child(1):hover &--circle{
+	&:nth-child(1):hover &--circle {
 		background-color: $c-secondary2;
 	}
 
-	&:nth-child(2):hover &--circle{
+	&:nth-child(2):hover &--circle {
 		background-color: $c-tertiary3;
 	}
 
-	&:nth-child(3):hover &--circle{
+	&:nth-child(3):hover &--circle {
 		background-color: $c-primary3;
 	}
 
-	&:nth-child(4):hover &--circle{
+	&:nth-child(4):hover &--circle {
 		background-color: $c-secondary4;
 	}
-	
-	&:nth-child(5):hover &--circle{
+
+	&:nth-child(5):hover &--circle {
 		background-color: $c-quaternary3;
 	}
 }
 
 // box avec image ronde et texte
-.box{
+.box {
 	display: flex;
 	// justify-content: space-between;
 	align-items: center;
 
-	@media screen and (max-width: 767px) {
-		flex-direction: column;
-	}
-
-	&--picture{
+	&--picture {
 		flex: 4;
 		width: 365rem;
 		height: 365rem;
+
+		@media screen and (max-width: 767px) {
+			width: 260rem;
+			height: 260rem;
+		}
 	}
-	
-	&--image{
+
+	&--image {
 		width: 365rem;
 		height: 365rem;
 		border-radius: 200px;
 		object-fit: cover;
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+			width: 260rem;
+			height: 260rem;
+		}
 	}
 
-	&--wrapper{
-		flex: 5.5;
+	&--wrapper {
+		flex: 6;
 		// margin-left: 80rem;
 	}
 
-	&--subtitle{
+	&--subtitle {
 		margin-bottom: 16rem;
+
+		@media screen and (max-width: 767px) {
+			margin-top: 30rem;
+		}
 	}
 
-	&--text{
+	&--text {
 		@include base-text;
 		margin-top: 16rem;
 	}
-	
-	&--button{
+
+	&--puce {
+		@include base-text;
+		list-style-type: disc;
+		margin-top: 16rem;
+		padding-left: 25rem;
+	}
+	&--button {
 		margin-top: 44rem;
-		
+
+		@media screen and (max-width: 767px) {
+			width: 100%;
+			text-align: center;
+		}
 	}
 }
