@@ -75,6 +75,7 @@
 .actu {
 	background-color: $c-quaternary3;
 	position: relative;
+	z-index: 20;
 
 	&--svg-top {
 		background-color: $c-quaternary3;
@@ -106,6 +107,7 @@
 
 	&--box {
 		display: flex;
+		column-gap: 80rem;
 		justify-content: space-between;
 
 		@media screen and (max-width: 767px) {
@@ -115,13 +117,14 @@
 
 	&--picture {
 		flex: 6;
-		transition: $t-quick-dynamic;
 		overflow: hidden;
+		border-radius: 32px;
 	}
 
 	&--image {
 		object-fit: cover;
-		border-radius: 32px;
+		width: 100%;
+		transition: transform $t-quick-dynamic;
 
 		&:hover {
 			transform: scale(110%);
@@ -199,6 +202,7 @@
 // section notre histoire
 .story {
 	position: relative;
+	z-index: 30;
 	background-color: $c-white;
 	border-radius: 32px;
 	max-width: 1080rem;
@@ -228,9 +232,9 @@
 		}
 	}
 
-	&--picture {
-		// background-image: url(../media/flower1.png);
-	}
+	// &--picture {
+	// 	// background-image: url(../media/flower1.png);
+	// }
 }
 
 .story .box--button {
@@ -248,6 +252,8 @@
 	background-color: $c-tertiary2;
 	margin-top: -1000rem;
 	border-radius: 32px;
+	position: relative;
+	z-index: 10;
 
 	&--container {
 		@extend .container;
@@ -300,11 +306,15 @@
 .contact {
 	position: relative;
 	background-color: $c-primary2;
-	z-index: -1;
 	border-radius: 32px;
 	margin-top: -100rem;
 	padding-top: 170rem;
 	padding-bottom: 70rem;
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		padding-top: 110rem;
+	}
 
 	&--container {
 		display: flex;
@@ -346,6 +356,7 @@
 	}
 }
 
+// composant unique du bouton plus large
 .btn-large {
 	display: inline-block;
 	padding: 22px 53px;
@@ -354,8 +365,8 @@
 	color: $c-white;
 	border-radius: 32px;
 
-	// &:hover {
-	// 	background-color: $c-white;
-	// 	color: $c-black;
-	// }
+	&:hover {
+		background-color: $c-white;
+		color: $c-black;
+	}
 }
