@@ -75,6 +75,7 @@
 .actu {
 	background-color: $c-quaternary3;
 	position: relative;
+	z-index: 20;
 
 	&--svg-top {
 		background-color: $c-quaternary3;
@@ -106,6 +107,7 @@
 
 	&--box {
 		display: flex;
+		column-gap: 80rem;
 		justify-content: space-between;
 
 		@media screen and (max-width: 767px) {
@@ -115,15 +117,14 @@
 
 	&--picture {
 		flex: 6;
-		transition: $t-quick-dynamic;
 		overflow: hidden;
-		display: inline-block;
+		border-radius: 32px;
 	}
 
 	&--image {
 		object-fit: cover;
-		border-radius: 32px;
-		// width: 100%;
+		width: 100%;
+		transition: transform $t-quick-dynamic;
 
 		&:hover {
 			transform: scale(110%);
@@ -138,16 +139,28 @@
 		}
 	}
 
+	&--legend {
+		display: flex;
+	}
+
 	&--time {
 		@include legend-text;
 		margin-bottom: 8rem;
+		margin-right: 16rem;
+	}
+
+	&--circle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 20px;
+		height: 20px;
+		border-radius: 100rem;
+		background-color: $c-secondary4;
 	}
 
 	&--picto {
-		background-image: url(../../media/former-icon-white.svg);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-color: $c-secondary4;
+		width: 11px;
 	}
 
 	&--subtitle {
@@ -189,21 +202,171 @@
 // section notre histoire
 .story {
 	position: relative;
+	z-index: 30;
 	background-color: $c-white;
 	border-radius: 32px;
 	max-width: 1080rem;
 	margin: auto;
 	@extend .container;
-	padding-top: 90rem;
-	padding-bottom: 90rem;
+	padding: 80rem;
 
 	@media screen and (max-width: 767px) {
 		margin-inline: 18rem;
 		margin-top: -80rem;
+		padding: 40rem;
 	}
 
 	&--title {
 		text-align: center;
+		margin-bottom: 80rem;
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 60rem;
+		}
 	}
 
+	&--box {
+		column-gap: 30rem;
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+
+	// &--picture {
+	// 	// background-image: url(../media/flower1.png);
+	// }
+}
+
+.story .box--button {
+	background-color: $c-primary4;
+	color: $c-white;
+
+	&:hover {
+		background-color: $c-quaternary4;
+		color: $c-black;
+	}
+}
+
+// section missions
+.mission {
+	background-color: $c-tertiary2;
+	margin-top: -1000rem;
+	border-radius: 32px;
+	position: relative;
+	z-index: 10;
+
+	&--container {
+		@extend .container;
+		max-width: 1080rem;
+		padding-top: 1120rem;
+		padding-bottom: 50rem;
+
+		@media screen and (max-width: 767px) {
+			padding-top: 1050rem;
+		}
+	}
+
+	&--title {
+		text-align: center;
+		margin-bottom: 50rem;
+	}
+
+	&--lign {
+		border-top: 2px solid $c-white;
+		margin: auto;
+		width: 100%;
+		margin-bottom: 80rem;
+	}
+
+	&--box {
+		margin-bottom: 120rem;
+	}
+
+	&--box:nth-of-type(1) {
+		@media screen and (max-width: 767px) {
+			flex-direction: column-reverse;
+		}
+	}
+	&--box:nth-of-type(2) {
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+}
+
+.mission .box--button {
+	&:hover {
+		background-color: $c-primary3;
+		color: $c-white;
+	}
+}
+
+// section questions préfooter - contact
+
+.contact {
+	position: relative;
+	background-color: $c-primary2;
+	border-radius: 32px;
+	margin-top: -100rem;
+	padding-top: 170rem;
+	padding-bottom: 70rem;
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		padding-top: 110rem;
+	}
+
+	&--container {
+		display: flex;
+		@extend .container;
+		max-width: 700rem;
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+			margin-top: 44rem;
+		}
+	}
+
+	&--wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&--title {
+		margin-top: 25rem;
+	}
+	&--text {
+		@include base-text;
+	}
+
+	&--image {
+		width: 196rem;
+	}
+
+	&--button {
+		margin-top: 90rem;
+		margin-left: 80rem;
+
+		@media screen and (max-width: 767px) {
+			margin-top: 44rem;
+			margin-left: 0;
+			text-align: center;
+		}
+	}
+}
+
+// composant unique du bouton plus large
+.btn-large {
+	display: inline-block;
+	padding: 22px 53px;
+	height: 70rem;
+	background-color: $c-black;
+	color: $c-white;
+	border-radius: 32px;
+
+	&:hover {
+		background-color: $c-white;
+		color: $c-black;
+	}
 }

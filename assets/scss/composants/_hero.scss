@@ -53,7 +53,8 @@
 	}
 
 	&--button{
-
+		transition: all $t-quick-dynamic;
+		
 		&:hover{
 			background-color: $c-primary3;
 			color: $c-white;

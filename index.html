@@ -237,14 +237,12 @@
     </header>
 
 	
-
-
-	<section class="hero">
-		<div class="hero--container">
-			<div class="hero--wrapper">
-				<h4 class="h4 hero--overtitle">Le 4 bis c'est quoi ?</h4>
-				<h1 class="h1 hero--title">La place de tous les possibles</h1>
-				<p class="hero--text">
+		<section class="hero">
+			<div class="hero--container">
+				<div class="hero--wrapper">
+					<h4 class="h4 hero--overtitle">Le 4 bis c'est quoi ?</h4>
+					<h1 class="h1 hero--title">La place de tous les possibles</h1>
+					<p class="hero--text">
 						Le 4bis est un magnifique et formidable espace conçu pour vous apporter les supports et les accompagnements dont vous avez besoin sur Rennes et ses communes alentours. Ce lieu unique de ressources d’informations et d’expressions, met en place de nombreuses actions pour vous
 						aider dans divers domaines.
 					</p>
@@ -325,8 +323,13 @@
 						<img class="actu--image" src="./assets/media/picture-actu-bourses-zellidja.jpg" alt="femme de dos devant un rayonnage de livres - bourse Zellidja" />
 					</figure>
 					<div class="actu--wrapper">
-						<time class="actu--time" datetime="2023-01-12"> 12 janvier 2023</time>
-						<div class="actu--picto">se former</div>
+						<div class="actu--legend">
+							<time class="actu--time" datetime="2023-01-12"> 12 janvier 2023</time>
+							<div class="actu--circle">
+								<img class="actu--picto" src="./assets/media/former-icon-white.svg" alt="cartable de formation" />
+							</div>
+						</div>
+
 						<h3 class="h3 actu--subtitle">Candidatez maintenant à la bourse Zellidja 2023 !</h3>
 						<p class="actu--text">La bourse Zellidja offre la possibilité de voyager en solitaire le temps d’un mois ou plus. Elle est destinée à tous les jeunes âgés de 16 à 20 ans, peu importe leur niveau d’études ou leur parcours professionnel.</p>
 						<a class="actu--button btn" href="">Lire l'article</a>
@@ -357,14 +360,14 @@
 		</section>
 
 		<section class="mission">
-			<div class="container">
+			<div class="mission--container">
 				<h2 class="h2 mission--title tracking-in-expand-fwd">Nos missions</h2>
-				<div class="mission--lign-dash"></div>
-				<article class="mission-box box">
+				<div class="mission--lign"></div>
+				<article class="mission--box box">
 					<div class="box--wrapper">
 						<h3 class="h3 box--subtitle">Des permanences</h3>
 						<p class="box--text">Un informateur ou une informatrice est toujours présente dans notre centre le 4bis afin de vous accompagner dans la documentation mise à votre disposition et éventuellement pour vous orienter vers nos permanences spécialisées :</p>
-						<ul>
+						<ul class="box--puce">
 							<li>l’information jeunesse</li>
 							<li>le PILJ (Point Info Logement Jeunes)</li>
 							<li>le SAS, point d’écoute</li>
@@ -375,18 +378,17 @@
 						<a class="box--button btn" href="">En savoir plus</a>
 					</div>
 					<figure class="box--picture">
-						<img class="box--image" src="" alt="" />
+						<img class="box--image" src="./assets/media/picture-permanence.jpg" alt="homme et femme lors d'une permanence au 4bis" />
 					</figure>
 				</article>
-
-				<article class="mission-box box">
+				<article class="mission--box box">
 					<figure class="box--picture">
-						<img class="box--image" src="" alt="" />
+						<img class="box--image" src="./assets/media/picture-tam-tam.jpg" alt="festival Tam Tam à Rennes" />
 					</figure>
 					<div class="box--wrapper">
 						<h3 class="h3 box--subtitle">Des actions</h3>
 						<p class="box--text">Elles sont nombreuses tout au long de l’année et vous accompagnent dans divers sujets, que ce soit des festivals, des dispositifs ou des aides. Le 4bis est là pour vous.</p>
-						<ul>
+						<ul class="box--puce">
 							<li>le FRIJ (Fonds Rennais d’Initiatives des Jeunes)</li>
 							<li>la main verte</li>
 							<li>forum des Jobs d’été</li>
@@ -403,17 +405,17 @@
 			</div>
 		</section>
 		<section class="contact">
-			<div class="container">
+			<div class="contact--container">
 				<div class="contact--wrapper">
+					<img class="contact--image" src="/assets/media/questions.png" alt="interrogation point">
 					<h3 class="h3 contact--title">Des questions ?</h3>
 					<div class="contact--text">Besoin de plus de renseignements ?</div>
 				</div>
-				<a class="h4 contact--button btn-large">contactez-nous</a>
+				<a class="h4 contact--button btn-large" href="">contactez-nous </a>
 			</div>
 		</section>
-
 		<footer>
-			<div class="container">
+			<div class="footer--container">
 				<div class="footer--info">
 					<a class="footer--logo" href=""></a>
 					<address class="footer--adress">
@@ -445,7 +447,6 @@
 						<a href="">Nouvel arrivant</a>
 						<a href="">Location de la salle</a>
 					</nav>
-
 					<nav class="footer--link-nav">
 						<a href="">Mentions légales</a>
 						<a href="">Politiques de confidentialité</a>

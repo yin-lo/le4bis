@@ -1,3 +1,14 @@
+// html {
+// 	font-size: 1px;
+// 	@media screen and (min-width: 768px) and (max-width: 1235px) {
+// 		font-size: 0.08vw;
+// 	}
+// }
+
+body {
+	overflow-x: hidden;
+}
+
 .container {
 	margin-inline: auto;
 	padding-inline: 18rem;
@@ -9,10 +20,6 @@ a {
 	text-decoration: none;
 }
 
-body {
-	overflow-x: hidden;
-}
-
-img{
+img {
 	max-width: 100%;
 }

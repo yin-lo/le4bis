@@ -1,3 +1,25 @@
 @use '../general/variables' as *;
 @use '../general/font' as *;
 @use '../general/general';
+
+footer{
+	background-color: $c-footer;
+	color: $c-white;
+	padding-top: 130rem;
+	margin-top: -50rem;
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		padding-top: 130rem;
+	}
+
+	&--container {
+		display: flex;
+		@extend .container;
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+			margin-top: 44rem;
+		}
+	}
+}
