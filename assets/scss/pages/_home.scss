@@ -89,6 +89,7 @@
 	}
 
 	&--container {
+		position: relative;
 		@extend .container;
 		padding-top: 120rem;
 		padding-bottom: 150rem;
@@ -105,6 +106,12 @@
 		margin-bottom: 60rem;
 	}
 
+	&--deco{
+		position: absolute;
+		top: 130rem;
+		left: -20rem;
+	}
+	
 	&--box {
 		display: flex;
 		column-gap: 80rem;
@@ -364,6 +371,7 @@
 	background-color: $c-black;
 	color: $c-white;
 	border-radius: 32px;
+	transition: all $t-quick-dynamic;
 
 	&:hover {
 		background-color: $c-white;
