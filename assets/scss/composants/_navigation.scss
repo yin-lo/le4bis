@@ -7,7 +7,7 @@ html {
 
 .nav {
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   background-color: $c-background;
   width: 100%;
   height: 126rem;
@@ -16,95 +16,208 @@ html {
   justify-content: space-between;
   box-shadow: 0 4rem 4rem 0 rgba(0, 0, 0, 0.2);
 
-  .nav--logocontent {
+   .nav--burger {
+    transform: scale(1.8);
+    background: transparent;
+    border: 0;
+    display: none;
+    position: absolute;
+    left: 90%;
+    align-self: center;
+    }
+  
+  
+  
+  .nav--logo1{
     margin-left: 51rem;
     min-width: 115rem;
+  }
+   
+  .nav--logo2{
+    display: none;
   }
 
   .nav--ul {
     display: flex;
     margin-right: 235rem;
+    
 
     .nav--list {
-      margin-right: 215rem;
+      margin-right: 215rem;   
+    }
+    
+    
+    
+    .nav--lien {
+      color: $c-black;
+      font-size: 16rem;
+      line-height: 24rem;
+      font-weight: 800;
+      text-decoration: none;
+      margin-left: 60rem;
+      max-width: 200rem;
+      white-space: nowrap;
+      transition: 100ms;
 
-      .nav--lien {
-        color: $c-black;
-        font-size: 16rem;
-        line-height: 24rem;
-        font-weight: 800;
-        text-decoration: none;
-        margin-left: 60rem;
-        max-width: 200rem;
-        white-space: nowrap;
-        transition: 100ms;
-
-        &:hover {
-          color: $c-primary1;
-          border-bottom: 2rem solid $c-primary1;
-        }
+      &:hover {
+        color: $c-primary1;
+        border-bottom: 2rem solid $c-primary1;
       }
     }
   }
 }
+
 .megamenu {
-  
   display: flex;
-  justify-content: center;
+  justify-content:center;
   gap: 125rem;
   position: fixed;
   top: 125rem;
-  z-index: 1;
+  z-index: 100;
   height: 390rem;
   width: 100%;
+  min-width: 1440rem;
   background-color: $c-background;
   box-shadow: 0 4rem 4rem 0 rgba(0, 0, 0, 0.2);
   // transform: translateY(-140%);
-  opacity:0;
+  opacity: 0;
   transition: 300ms;
-  
-  
+
+
   &--colunm {
     
     .parentnav {
       margin-bottom: 32rem;
       transition: 100ms;
       
+
       &:hover{
-      cursor: pointer;
-      stroke: $c-primary1;
-      color:$c-primary1;
+        cursor: pointer;
+        stroke: $c-primary1;
+        color: $c-primary1;
+
+        svg path{
+          stroke: $c-primary1;
+        color: $c-primary1;
+        }
       }
+      
+
       &--titre {
         padding-bottom: 2rem;
         font-size: 16rem;
         font-weight: 600;
         pointer-events: none;
+       
       }
 
       &--icon {
-        
+        fill-opacity: 0;
         float: left;
         width: 30rem;
         height: 30rem;
         margin-right: 12rem;
-        
+
       }
-      
+
       &--description {
         font-size: 11rem;
         font-weight: 600;
         line-height: 14rem;
         padding-left: 43rem;
-       
-        
-        
-       
+
+
+
       }
     }
+  }
+}
+
+.nouvel {
+  margin-top: 60rem;
+  width: 90rem;
+  height: 90rem;
+  border-radius: 20%;
+  background-color: $c-secondary1;
+  border: 0;
+  transition: 300ms;
+
+  &--img {
+    width: 32rem;
+  }
+
+  &--texto {
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: $c-secondary3;
   }
 
 }
 
+.urgences {
+  position: absolute;
+  bottom: 22%;
+  margin-left: 20rem;
+  width: 90rem;
+  height: 90rem;
+  border-radius: 20%;
+  background-color: $c-primary1;
+  border: 0;
+  transition: 300ms;
+
+  &--img {
+    width: 38rem;
+  }
+
+  &--texto {
+    font-size: 16rem;
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: $c-primary3;
+  }
+}
+
+@media  (max-width: 1000px) {
+
+  .nav .nav--ul{
+    display: none;
+    
+  }
+  
+  .nav .nav--burger{
+     display: block;
+      position: absolute;
+      left: 90%;
+      align-self: center;
+    
+  }
+
+.megamenu{
+  display: none;
+}
+
+.megamenu--colunm{
+  background-color: $c-background;
+  position: absolute;
+  display: none;
+  
+}
 
 
+.nav--logo1{
+  display: none;
+}
+
+.nav .nav--logo2{
+  display: block;
+  margin-left: 31rem;
+  width: 50rem;
+
+}
+
+
+}
