@@ -129,11 +129,12 @@
 // box avec image ronde et texte
 .box {
 	display: flex;
-	// justify-content: space-between;
+	justify-content: space-between;
+	column-gap: 80rem;
 	align-items: center;
 
 	&--picture {
-		flex: 4;
+		position: relative;
 		width: 365rem;
 		height: 365rem;
 
@@ -144,8 +145,8 @@
 	}
 
 	&--image {
-		width: 365rem;
-		height: 365rem;
+		width: 100%;
+		height: 100%;
 		border-radius: 200px;
 		object-fit: cover;
 
@@ -157,7 +158,7 @@
 	}
 
 	&--wrapper {
-		flex: 6;
+		flex: 1;
 	}
 
 	&--subtitle {
@@ -186,5 +187,25 @@
 			width: 100%;
 			text-align: center;
 		}
+	}
+}
+
+// animation sur les h2
+.tracking-in-expand-fwd {
+	animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes tracking-in-expand-fwd {
+	0% {
+		letter-spacing: -0.5em;
+		transform: translateZ(-700px);
+		opacity: 0;
+	}
+	40% {
+		opacity: 0.6;
+	}
+	100% {
+		transform: translateZ(0);
+		opacity: 1;
 	}
 }
