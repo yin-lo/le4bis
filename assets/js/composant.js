@@ -72,10 +72,10 @@ if (window.innerWidth <= 1000) {
 	}
 
 	burgerElt.addEventListener('click', () => {
-		if (navUlElt.style.display === 'flex') {
-			navUlElt.style.display = 'none';
-		} else {
+		if (burgerElt.classList.toggle('is-open')) {
 			navUlElt.style.display = 'flex';
+		} else {
+			navUlElt.style.display = 'none';
 		}
 	});
 }

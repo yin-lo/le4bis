@@ -24,13 +24,34 @@ header {
 	align-items: center;
 
 	&--burger {
-		transform: scale(1.8);
 		background: transparent;
 		border: 0;
 		display: none;
 		position: absolute;
 		left: 90%;
 		align-self: center;
+
+		line {
+			transition: transform $t-quick-dynamic;
+			transform-origin: 50%;
+		}
+
+		&.is-open {
+			line {
+				&:nth-child(1) {
+					transform: scale(0) translateY(10px);
+				}
+				&:nth-child(2) {
+					transform: rotate(45deg);
+				}
+				&:nth-child(3) {
+					transform: rotate(-45deg);
+				}
+				&:nth-child(4) {
+					transform: scale(0) translateY(-10px);
+				}
+			}
+		}
 	}
 
 	&--logo1 {
