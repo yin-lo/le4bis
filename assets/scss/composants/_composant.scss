@@ -207,3 +207,32 @@
 		opacity: 1;
 	}
 }
+
+@mixin megamenuButton($bgColor: $c-secondary1, $bgHoverColor: $c-secondary3, $imgWidth: 32rem) {
+	width: 90rem;
+	height: 90rem;
+	border-radius: 20%;
+	background-color: $bgColor;
+	border: 0;
+	transition: 300ms;
+
+	&--img {
+		width: $imgWidth;
+		transition: 300ms;
+	}
+
+	&--texto {
+		font-weight: 700;
+	}
+
+	&:hover {
+		background-color: $bgHoverColor;
+		cursor: pointer;
+		color: $c-white;
+
+		.nouvel--img,
+		.urgences--img {
+			filter: invert(100%);
+		}
+	}
+}
