@@ -14,9 +14,13 @@
 		column-gap: 80rem;
 		justify-content: space-between;
 
+		@media screen and (max-width: 1000px) {
+			padding-top: 200rem;
+		}
+		
 		@media screen and (max-width: 767px) {
 			flex-direction: column-reverse;
-			padding-top: 50rem;
+			padding-top: 150rem;
 			padding-bottom: 55rem;
 		}
 	}

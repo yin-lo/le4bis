@@ -63,6 +63,10 @@ header {
 			border-bottom: 2rem solid $c-primary1;
 		}
 	}
+
+	.next {
+		display: none;
+	}
 }
 
 .megamenu {
@@ -84,7 +88,7 @@ header {
 		column-gap: 15rem;
 	}
 
-	&--colunm {
+	&--column {
 		position: relative;
 		flex: 1;
 
@@ -146,77 +150,87 @@ header {
 }
 
 @media (max-width: 1000px) {
-	.nav .nav--ul {
-		display: none;
-		background-color: $c-background;
-		position: absolute;
-		top: 120rem;
-		left: 0;
-		width: 100%;
-		height: 370rem;
+	header {
+		max-height: none;
+		overflow: inherit;
 	}
 
-	.nav .nav--ul .nav--list {
-		margin-top: 50rem;
-		text-align: center;
-	}
+	.nav {
+		&--ul {
+			padding-top: 20rem;
+			padding-bottom: 120rem;
+			background-color: $c-background;
+			display: none;
+			flex-direction: column;
+			row-gap: 60rem;
+			align-items: center;
+			position: absolute;
+			top: 120rem;
+			left: 0;
+			width: 100%;
+		}
 
-	.nav .nav--ul .nav--list .nav--lien {
-		font-size: larger;
-		margin-bottom: 50rem;
-		margin-left: 50%;
-	}
+		&--list {
+			width: 220rem;
+			display: flex;
+			justify-content: space-between;
+		}
+	
+		&--lien {
+			font-size: larger;
+		}
+	
+		&--burger {
+			display: block;
+			position: absolute;
+			left: 83%;
+			align-self: center;
+		}
 
-	.nav .nav--burger {
-		display: block;
-		position: absolute;
-		left: 83%;
-		align-self: center;
+		.next {
+			display: block;
+			background-color: transparent;
+			border: none;
+		}
 	}
 
 	.megamenu {
 		display: none;
-	}
 
-	.megamenu--colunm {
-		background-color: $c-background;
-		position: absolute;
-		top: 0rem;
-		left: 0;
-		width: 100%;
-		display: none;
-
-		.back {
+		&--column {
 			background-color: $c-background;
-			border: none;
 			position: absolute;
-			top: 0%;
-			left: 75rem;
-			display: block;
-			transform: rotate(180deg);
-			stroke-width: 4rem;
-		}
-
-		.parentnav {
-			margin-left: 30%;
-			margin-right: 30%;
-			margin-bottom: 60rem;
-
-			dl {
-				display: none;
+			top: 0rem;
+			left: 0;
+			width: 100%;
+			display: none;
+			height: 100%;
+			flex-direction: column;
+			align-items: center;
+	
+			.back {
+				background-color: transparent;
+				border: none;
+				position: absolute;
+				top: 0%;
+				left: 50%;
+				transform: translateX(-150px);
+				display: block;
+			}
+	
+			.parentnav {
+				margin-bottom: 60rem;
+				width: 200rem;
+	
+				dl {
+					display: none;
+				}
 			}
 		}
-	}
-
-	.nouvel {
-		margin-top: 3%;
-		margin-right: 25%;
-	}
-
-	.urgences {
-		position: absolute;
-		bottom: 0%;
-		left: 50%;
+	
+		&--buttons {
+			position: static;
+		}
 	}
 
 	.nav--logo1 {

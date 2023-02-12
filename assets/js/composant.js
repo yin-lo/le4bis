@@ -27,52 +27,55 @@
 
 const headerElt = document.querySelector('header');
 const megaMenuElt = document.querySelector('.megamenu');
+const navItemElts = document.querySelectorAll('.nav li');
+const megaColElts = document.querySelectorAll('.megamenu--column');
+const burgerElt = document.querySelector('.nav--burger');
+const navUlElt = document.querySelector('.nav .nav--ul');
+const navLienElt = document.querySelector('.nav--lien');
+const megamenuColumnElt = document.querySelector('.megamenu--column');
+const lienElts = document.querySelectorAll('.nav--lien');
 
-// pr laisser le menu ouvert au survol de la souris
-headerElt.addEventListener('mouseenter', () => {
-	megaMenuElt.style.opacity = 1;
-	headerElt.style.maxHeight = '800rem';
-});
 
-// Quand la souris quitte le header (megamenu inclu)
-headerElt.addEventListener('mouseleave', () => {
-	megaMenuElt.style.opacity = null;
-	headerElt.style.maxHeight = null;
-});
-
-if (window.innerWidth < 1000) {
-	const navItems = document.querySelectorAll('.nav li');
-	const megaCols = document.querySelectorAll('.megamenu--colunm');
-	console.log(megaCols.length);
-
-	for (let i = 0; i < navItems.length; i = i + 1) {
-		navItems[i].appendChild(megaCols[i]);
-	}
-}
-
-document.querySelector('.nav--burger').addEventListener('click', () => {
-	const navUL = document.querySelector('.nav .nav--ul');
-	if (navUL.style.display === 'block') {
-		navUL.style.display = 'none';
-	} else {
-		navUL.style.display = 'block';
-	}
-});
-
-const liens = document.querySelectorAll('.nav--lien');
-
-for (let i = 0; i < liens.length; i = i + 1) {
-	liens[i].addEventListener('click', function () {
-		this.nextSibling.style.display = 'block';
-		this.style.display = 'none';
+if (window.innerWidth > 1000) {
+	// pr laisser le menu ouvert au survol de la souris
+	headerElt.addEventListener('mouseenter', () => {
+		megaMenuElt.style.opacity = 1;
+		headerElt.style.maxHeight = '800rem';
+	});
+	
+	// Quand la souris quitte le header (megamenu inclu)
+	headerElt.addEventListener('mouseleave', () => {
+		megaMenuElt.style.opacity = null;
+		headerElt.style.maxHeight = null;
 	});
 }
 
-const back = document.querySelector('.back');
-const navLien = document.querySelector('.nav--lien');
-const megamenuColunm = document.querySelector('.megamenu--colunm');
+if (window.innerWidth <= 1000) {
+	// On boucle sur la navigation principale
+	for (let i = 0; i < navItemElts.length; i = i + 1) {
+		const navItemElt = navItemElts[i];
+		const megaColElt = megaColElts[i];
 
-back.addEventListener('click', function () {
-	navLien.style.display = 'block';
-	megamenuColunm.style.display = 'none';
-});
+		// On bouge la colonne de megamenu dans l'élément de navigation principale
+		navItemElt.appendChild(megaColElt);
+
+		const nextElt = navItemElt.querySelector('.next');
+		const backElt = navItemElt.querySelector('.back');
+
+		nextElt.addEventListener('click', () => {
+			megaColElt.style.display = 'flex';
+		});
+
+		backElt.addEventListener('click', () => {
+			megaColElt.style.display = null;
+		});
+	}
+
+	burgerElt.addEventListener('click', () => {
+		if (navUlElt.style.display === 'flex') {
+			navUlElt.style.display = 'none';
+		} else {
+			navUlElt.style.display = 'flex';
+		}
+	});
+}
