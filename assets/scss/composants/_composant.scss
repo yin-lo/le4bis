@@ -18,6 +18,7 @@
 	@include second-items;
 	display: flex;
 	align-items: center;
+	position: relative;
 
 	&--hidden-arrow {
 		width: 24px;
@@ -28,8 +29,23 @@
 		margin-left: 10px;
 	}
 
-	&:hover &--text {
-		text-decoration: underline;
+	&--text{
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 2rem;
+			background-color: $c-black;
+			transition: width $t-quick-dynamic;
+		}
+	}
+	
+	&:hover {
+		.link--text::after {
+			width: 80%;
+		}
 	}
 
 	&:hover &--hidden-arrow {
@@ -191,6 +207,10 @@
 }
 
 // animation sur les h2
+.js-animated-title {
+	opacity: 0;
+}
+
 .tracking-in-expand-fwd {
 	animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
@@ -208,6 +228,7 @@
 	}
 }
 
+// pour les boutons "nouvel arrivant et urgence dans la nav"
 @mixin megamenuButton($bgColor: $c-secondary1, $bgHoverColor: $c-secondary3, $imgWidth: 32rem) {
 	width: 90rem;
 	height: 90rem;
@@ -234,5 +255,24 @@
 		.urgences--img {
 			filter: invert(100%);
 		}
+	}
+}
+
+// animation sur les points interrogations
+.js-animated-img {
+	animation: anim-img 0.5s infinite alternate linear;
+}
+
+@keyframes anim-img {
+	0% {
+		filter: invert(0%);
+	}
+	
+	50% {
+		filter: invert(50%);
+	}
+	
+	100% {
+		filter: invert(100%);
 	}
 }

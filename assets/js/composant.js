@@ -1,30 +1,22 @@
-// // window.addEventListener('scroll', function(){
-// // 	let Y=window.scrollY
-// // 	if (Y>400) {
-// // 		document.querySelector('.h2').classList.add('tracking-in-expand-fwd');
-// // 	}
-// // 	else{
-// // 		document.querySelector('.h2').classList.remove('tracking-in-expand-fwd');
-// // 	};
-// // });
 
-// // 400 1300 2000 2800
+// animation sur les titres
+const animatedTitleElts = document.querySelectorAll('.js-animated-title');
 
-// let options = {
-// 	root: document,
-// 	rootMargin: '0px',
-// 	threshold: .1,
-// };
+const addKeyframe = (entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('tracking-in-expand-fwd');
+		}
+	});
+}
 
-// let target = document.querySelector('.h2');
+const observer = new IntersectionObserver(addKeyframe);
+for (const animatedTitleElt of animatedTitleElts) {
+	observer.observe(animatedTitleElt);
+}
 
-// let observer = new IntersectionObserver(AddKeyframe, options);
-// observer.observe(target);
 
-// function AddKeyframe() {
-// 	document.querySelector('.h2').classList.add('tracking-in-expand-fwd');
-// }
-
+// constantes nommées pour le menu
 const headerElt = document.querySelector('header');
 const megaMenuElt = document.querySelector('.megamenu');
 const navItemElts = document.querySelectorAll('.nav li');
@@ -71,6 +63,7 @@ if (window.innerWidth <= 1000) {
 		});
 	}
 
+	// pour transformer le burger en croix
 	burgerElt.addEventListener('click', () => {
 		if (burgerElt.classList.toggle('is-open')) {
 			navUlElt.style.display = 'flex';
