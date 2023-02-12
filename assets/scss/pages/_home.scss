@@ -11,7 +11,7 @@
 		padding-top: 210rem;
 		padding-bottom: 180rem;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 775px) {
 			padding-top: 80rem;
 			padding-bottom: 80rem;
 		}
@@ -21,20 +21,21 @@
 		text-align: center;
 		margin-bottom: 100rem;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 775px) {
 			margin-bottom: 50rem;
 		}
 	}
 
 	&--title {
 		margin-bottom: 32rem;
+		opacity: 0;
 	}
 
 	&--text {
 		max-width: 535rem;
 		margin: auto;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 775px) {
 			width: 100%;
 		}
 	}
@@ -43,35 +44,40 @@
 		display: flex;
 		justify-content: space-around;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 775px) {
 			flex-wrap: wrap;
 			column-gap: 65rem;
 			row-gap: 72rem;
+
 			//tous les enfants directs de --box font la même taille :
 			> * {
 				flex: 1;
 			}
 		}
 	}
+	&--picto:nth-child(1) {
+		margin-bottom:10rem;
+	}
 
 	&--picto:nth-child(2n + 0) {
 		padding-top: 65rem;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 775px) {
 			padding-top: 0;
 		}
 	}
 
 	&--picto:nth-child(3) {
+		margin-top: 10rem;
 		padding-top: 130rem;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 775px) {
 			padding-top: 0;
 		}
 	}
 }
 
-// section actualités - faire le zomm sur la photo et mettre le picto à côté de la date
+// section actualités
 .actu {
 	background-color: $c-quaternary3;
 	position: relative;
@@ -106,13 +112,18 @@
 		margin-bottom: 60rem;
 	}
 
-	&--deco{
+	&--deco {
 		position: absolute;
 		top: 130rem;
-		left: -20rem;
+		left: -150rem;
+
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
 	}
-	
+
 	&--box {
+		position: relative;
 		display: flex;
 		column-gap: 80rem;
 		justify-content: space-between;
@@ -223,6 +234,17 @@
 		padding: 40rem;
 	}
 
+	&--deco {
+		position: absolute;
+		top: -50rem;
+		right: -50rem;
+
+		@media screen and (max-width: 1235px) {
+			display: none;
+		}
+
+	}
+
 	&--title {
 		text-align: center;
 		margin-bottom: 80rem;
@@ -232,8 +254,16 @@
 		}
 	}
 
+	&--flower {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
 	&--box {
+		position: relative;
 		column-gap: 30rem;
+
 		@media screen and (max-width: 767px) {
 			flex-direction: column;
 		}
@@ -287,6 +317,7 @@
 
 	&--box {
 		margin-bottom: 120rem;
+		position: relative;
 	}
 
 	&--box:nth-of-type(1) {
@@ -298,6 +329,12 @@
 		@media screen and (max-width: 767px) {
 			flex-direction: column;
 		}
+	}
+
+	&--flower {
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 }
 

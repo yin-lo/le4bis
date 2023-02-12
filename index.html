@@ -270,6 +270,7 @@
 			</div>
 		</div>	
     </header>
+	
 		<section class="hero">
 			<div class="hero--container">
 				<div class="hero--wrapper">
@@ -303,7 +304,7 @@
 		<section class="guide">
 			<div class="guide--container">
 				<div class="guide--wrapper">
-					<h2 class="h2 guide--title tracking-in-expand-fwd">Nos Guides Pratiques</h2>
+					<h2 class="h2 guide--title">Nos Guides Pratiques</h2>
 					<p class="guide--text">Retrouvez tous nos guides en accès libre au centre d’information du 4bis ou en téléchargement sur notre site.</p>
 				</div>
 				<figure class="guide--box">
@@ -349,7 +350,7 @@
 			</svg>
 			<div class="actu--svg-top clipped-top"></div>
 			<article class="actu--container">
-				<h2 class="h2 actu--title tracking-in-expand-fwd">Les Actualités</h2>
+				<h2 class="h2 actu--title">Les Actualités</h2>
 				<img class="actu--deco" src="./assets/media/contour-blanc.png" alt="rectangle à 3 bords ronds en contour blanc" />
 				<div class="actu--box">
 					<figure class="actu--picture">
@@ -378,10 +379,12 @@
 		</section>
 
 		<section class="story">
-			<h2 class="h2 story--title tracking-in-expand-fwd">Notre histoire</h2>
+			<img class="story--deco" src="./assets/media/contour-bleu.png" alt="rectangle à 3 bords arrondis">
+			<h2 class="h2 story--title">Notre histoire</h2>
 			<div class="story--box box">
 				<figure class="box--picture">
 					<img class="box--image" src="./assets/media/picture-meeting.jpg" alt="réunion dans le 4bis" />
+					<img class="story--flower" src="./assets/media/flower1.png" alt="2 rectangles formant une fleur"/>
 				</figure>
 				<div class="box--wrapper">
 					<h3 class="h3 box--subtitle">La place des possibles</h3>
@@ -394,7 +397,7 @@
 
 		<section class="mission">
 			<div class="mission--container">
-				<h2 class="h2 mission--title tracking-in-expand-fwd">Nos missions</h2>
+				<h2 class="h2 mission--title">Nos missions</h2>
 				<div class="mission--lign"></div>
 				<article class="mission--box box">
 					<div class="box--wrapper">
@@ -412,11 +415,14 @@
 					</div>
 					<figure class="box--picture">
 						<img class="box--image" src="./assets/media/picture-permanence.jpg" alt="homme et femme lors d'une permanence au 4bis" />
+						<img class="mission--flower" src="./assets/media/flower2.png" alt="2 rectangles formant une fleur">
 					</figure>
 				</article>
+
 				<article class="mission--box box">
 					<figure class="box--picture">
 						<img class="box--image" src="./assets/media/picture-tam-tam.jpg" alt="festival Tam Tam à Rennes" />
+						<img class="story--flower" src="./assets/media/flower3.png" alt="2 rectangles formant une fleur">
 					</figure>
 					<div class="box--wrapper">
 						<h3 class="h3 box--subtitle">Des actions</h3>
@@ -437,6 +443,7 @@
 				</article>
 			</div>
 		</section>
+
 		<section class="contact">
 			<div class="contact--container">
 				<div class="contact--wrapper">
@@ -447,24 +454,32 @@
 				<a class="h4 contact--button btn-large" href="">contactez-nous </a>
 			</div>
 		</section>
-		<footer>
+		<footer class="footer">
 			<div class="footer--container">
 				<div class="footer--info">
-					<a class="footer--logo" href=""></a>
+					<a class="footer--logo" href="">
+						<img class="footer--image" src="./assets/media/logo4bis-blanc.svg" alt=""/>
+					</a>
 					<address class="footer--adress">
 						4 bis cours des Alliés,
 						<br />
 						35000 Rennes
 					</address>
-					<p>
+					<p class="footer--time">
 						Du mardi au vendredi <time> 13h - 18h</time>
 						<br />
 						Le samedi <time> 14h - 18h</time>
 					</p>
 					<nav class="footer--social">
-						<a class="circle facebook" href=""></a>
-						<a class="circle instagram" href=""></a>
-						<a class="circle twitter" href=""></a>
+						<a class="footer--circle facebook" href="">
+							<img src="./assets/media/facebook.png" alt="">
+						</a>
+						<a class="footer--circle instagram" href="">
+							<img src="./assets/media/twitter.png" alt="">
+						</a>
+						<a class="footer--circle twitter" href="">
+							<img src="./assets/media/instagram.png" alt="">
+						</a>
 					</nav>
 				</div>
 
@@ -488,6 +503,7 @@
 				</div>
 			</div>
 		</footer>
-	<script src="./navigation.js"></script>
+	<script src="./assets/js/navigation.js"></script>
+	<script src="./assets/js/composant.js"></script>
 	</body>
 </html>

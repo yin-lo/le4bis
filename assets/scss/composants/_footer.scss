@@ -2,10 +2,12 @@
 @use '../general/font' as *;
 @use '../general/general';
 
-footer{
-	background-color: aquamarine;
+.footer {
+	background-color: $c-footer;
 	color: $c-white;
+	@include base-text;
 	padding-top: 130rem;
+	padding-bottom: 60rem;
 	margin-top: -50rem;
 
 	@media screen and (max-width: 767px) {
@@ -16,15 +18,102 @@ footer{
 	&--container {
 		display: flex;
 		@extend .container;
+		justify-content: space-between;
 
 		@media screen and (max-width: 767px) {
 			flex-direction: column;
-			margin-top: 44rem;
+			margin-top: 0;
+			margin-left: 60rem;
 		}
 	}
-}
 
-footer{
-	background-color: aqua;
-	
+	&--info {
+		max-width: 300rem;
+	}
+
+	&--logo {
+		display: block;
+		margin-bottom: 16rem;
+		width: 160rem;
+		height: 48rem;
+	}
+
+	&--image {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+
+	&--adress {
+		margin-bottom: 16rem;
+	}
+
+	&--time {
+		margin-bottom: 44rem;
+	}
+
+	&--social {
+		margin-top: 16rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-right: 40rem;
+	}
+
+	&--circle {
+		display: inline-block;
+		width: 40rem;
+		height: 40rem;
+		background-color: $c-white;
+		border-radius: 25%;
+		transition: background-color $t-quick-dynamic;
+
+		& img {
+			display: block;
+			height: 75%;
+			margin: auto;
+			padding-top: 12rem;
+			transition: all $t-quick-dynamic;
+		}
+
+		&:hover img {
+			filter: invert(100%);
+		}
+	}
+
+	.facebook:hover {
+		background-color: $c-secondary5;
+	}
+
+	.instagram:hover {
+		background-color: $c-secondary2;
+	}
+
+	.twitter:hover {
+		background-color: $c-primary2;
+	}
+
+	&--link {
+		margin-top: 80rem;
+		display: flex;
+		gap: 80rem;
+
+		@media screen and (max-width: 767px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&--link-nav {
+		a {
+			color: $c-white;
+			display: block;
+			margin-bottom: 15rem;
+			text-decoration: none;
+			transition: all 500ms;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	}
 }
