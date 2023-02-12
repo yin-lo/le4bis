@@ -1,4 +1,5 @@
 @use '../general/variables' as *;
+@use '../general/font' as *;
 
 .nav {
   position: fixed;
@@ -11,7 +12,7 @@
   justify-content: space-between;
   box-shadow: 0 4rem 4rem 0 rgba(0, 0, 0, 0.2);
 
-  .nav--burger {
+  &--burger {
     transform: scale(1.8);
     background: transparent;
     border: 0;
@@ -21,31 +22,25 @@
     align-self: center;
   }
 
-  .nav--logo1 {
+  &--logo1 {
     margin-left: 51rem;
     min-width: 115rem;
   }
 
-  .nav--logo2 {
+  &--logo2 {
     display: none;
   }
 
-  .nav--ul {
+  &--ul {
     display: flex;
     margin-right: 235rem;
 
     .nav--list {
       margin-right: 215rem;
 
-      @media screen and (min-width: 768px) and (max-width: 1235px) {
-        margin-right: 100rem;
-      }
-
       .nav--lien {
         color: $c-black;
-        font-size: 16rem;
-        line-height: 24rem;
-        font-weight: 800;
+        @include main-items;
         text-decoration: none;
         margin-left: 60rem;
         max-width: 200rem;
@@ -64,11 +59,11 @@
 .megamenu {
   display: flex;
   justify-content: center;
-  gap: 125rem;
+  gap: 100rem;
   position: fixed;
   top: 125rem;
   z-index: 100;
-  height: 390rem;
+  height: 420rem;
   width: 100%;
   min-width: 1440rem;
   background-color: $c-background;
@@ -77,6 +72,10 @@
   transition: 300ms;
 
   &--colunm {
+    .back {
+      display: none;
+    }
+
     .parentnav {
       margin-bottom: 32rem;
       transition: 100ms;
@@ -94,9 +93,7 @@
 
       &--titre {
         padding-bottom: 2rem;
-        font-size: 16rem;
-        font-weight: 600;
-        pointer-events: none;
+        @include second-items;
 
       }
 
@@ -138,12 +135,7 @@
 
   &:hover {
     background-color: $c-secondary3;
-  }
-
-  &:hover {
     cursor: pointer;
-    stroke: $c-primary1;
-    color: $c-primary1;
   }
 
   &--titre {
@@ -170,7 +162,7 @@
 
 .urgences {
   position: absolute;
-  bottom: 22%;
+  bottom: 99rem;
   margin-left: 20rem;
   width: 90rem;
   height: 90rem;
@@ -193,17 +185,40 @@
   }
 }
 
+
 @media (max-width: 1000px) {
 
   .nav .nav--ul {
     display: none;
+    background-color: $c-background;
+    position: absolute;
+    top: 120rem;
+    left: 0;
+    width: 100%;
+    height: 370rem;
 
   }
+
+  .nav .nav--ul .nav--list {
+    margin-top: 50rem;
+    text-align: center;
+
+  }
+
+
+  .nav .nav--ul .nav--list .nav--lien {
+    font-size: larger;
+    margin-bottom: 50rem;
+    margin-left: 50%;
+
+
+  }
+
 
   .nav .nav--burger {
     display: block;
     position: absolute;
-    left: 90%;
+    left: 83%;
     align-self: center;
 
   }
@@ -215,8 +230,45 @@
   .megamenu--colunm {
     background-color: $c-background;
     position: absolute;
+    top: 0rem;
+    left: 0;
+    width: 100%;
     display: none;
 
+    .back {
+      background-color:  $c-background;
+      border: none;
+      position: absolute;
+      top: 0%;
+      left: 75rem;
+      display: block;
+      transform: rotate(180deg);
+      stroke-width: 4rem;
+    }
+
+    .parentnav {
+      margin-left: 30%;
+      margin-right: 30%;
+      margin-bottom: 60rem;
+
+      dl {
+        display: none;
+      }
+    }
+
+  }
+
+
+  .nouvel {
+    margin-top: 3%;
+    margin-right: 25%;
+
+  }
+
+  .urgences {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
   }
 
   .nav--logo1 {
@@ -227,5 +279,6 @@
     display: block;
     margin-left: 31rem;
     width: 50rem;
+    min-width: 50rem;
   }
 }
