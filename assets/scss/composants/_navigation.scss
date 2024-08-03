@@ -3,7 +3,7 @@
 @use '../general/general';
 @use '../composants/composant' as *;
 
-$navHeight: 126rem;
+$navHeight: 90rem;
 
 header {
 	position: fixed;
@@ -59,6 +59,7 @@ header {
 	}
 
 	&--logo2 {
+    width: 30px;
 		display: none;
 	}
 
@@ -97,7 +98,7 @@ header {
 	opacity: 0;
 	transition: opacity $t-quick-dynamic;
 
-	// avoir une boîte vide à gauche du mégamenu pour correspondre à la place du logo dans la nav principale
+	// avoir une boîte vide à gauche du megamenu pour correspondre à la place du logo dans la nav principale
 	&::before {
 		content: '';
 		width: 115rem;
@@ -261,7 +262,7 @@ header {
 	.nav .nav--logo2 {
 		display: block;
 		margin-left: 31rem;
-		width: 50rem;
-		min-width: 50rem;
+		// width: 30rem;
+		// min-width: 30rem;
 	}
 }
