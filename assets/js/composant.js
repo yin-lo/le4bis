@@ -35,7 +35,7 @@ if (window.innerWidth > 1000) {
 		headerElt.style.maxHeight = '800rem';
 	});
 	
-	// Quand la souris quitte le header (megamenu inclu)
+	// Quand la souris quitte le header (megamenu inclus)
 	headerElt.addEventListener('mouseleave', () => {
 		megaMenuElt.style.opacity = null;
 		headerElt.style.maxHeight = null;
