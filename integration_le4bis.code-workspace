@@ -23,6 +23,11 @@
 		"liveSassCompile.settings.autoprefix": [
 			"> 1%",
 			"last 2 versions"
-		]
+    ],
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#36264C",
+      "titleBar.activeBackground": "#4C356B",
+      "titleBar.activeForeground": "#FBFAFC"
+    }
 	},
 }
